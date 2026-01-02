@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WiFi SecureX – Network Security Simulator</title>
+<title>WiFi SecureX – Network Security Tool</title>
 
 <style>
 :root {
@@ -19,7 +19,6 @@ body {
     color: #eaeaea;
 }
 
-/* HEADER */
 header {
     padding: 80px 20px;
     text-align: center;
@@ -38,7 +37,6 @@ header p {
     color: #bdbdbd;
 }
 
-/* BUTTON */
 .btn {
     display: inline-block;
     padding: 14px 32px;
@@ -56,7 +54,12 @@ header p {
     box-shadow: 0 0 25px #00ff9c66;
 }
 
-/* FEATURES */
+.btn.disabled {
+    background: #333;
+    color: #888;
+    pointer-events: none;
+}
+
 .section {
     padding: 60px 20px;
     max-width: 1100px;
@@ -81,7 +84,6 @@ header p {
     margin-bottom: 10px;
 }
 
-/* TERMINAL */
 .terminal {
     background: #020202;
     border: 1px solid #1c1c1c;
@@ -94,7 +96,6 @@ header p {
     overflow: hidden;
 }
 
-/* FOOTER */
 footer {
     padding: 30px 20px;
     text-align: center;
@@ -109,30 +110,38 @@ footer {
 <header>
     <h1>WiFi SecureX</h1>
     <p>
-        Advanced Wi-Fi Security Simulation App designed to help users
-        understand network vulnerabilities and improve protection.
+        Advanced Wi-Fi Security Awareness Tool designed to help users
+        understand network behavior and improve protection.
     </p>
-    <a href="#" class="btn">⬇ Download for Android</a>
-    <a href="#" class="btn">⬇ Download for Windows</a>
+
+    <!-- ANDROID DOWNLOAD (ADD YOUR REAL APK LINK HERE) -->
+    <a href="https://example.com/WiFiSecureX.apk" class="btn">
+        ⬇ Download for Android
+    </a>
+
+    <!-- WINDOWS COMING SOON -->
+    <a class="btn disabled">
+        🖥 Windows Version – Coming Soon
+    </a>
 </header>
 
 <section class="section">
     <div class="features">
         <div class="card">
-            <h3>📡 Network Analysis</h3>
-            <p>Simulates Wi-Fi scanning to demonstrate how networks broadcast data.</p>
+            <h3>📡 Network Overview</h3>
+            <p>Visual representation of how Wi-Fi networks broadcast information.</p>
         </div>
         <div class="card">
             <h3>🛡 Security Awareness</h3>
-            <p>Learn how weak passwords and misconfigurations put networks at risk.</p>
+            <p>Shows how weak passwords and poor settings create risk.</p>
         </div>
         <div class="card">
-            <h3>⚙ Real-Time Simulation</h3>
-            <p>Live terminal-style UI for realistic cybersecurity demonstrations.</p>
+            <h3>⚙ Live Terminal View</h3>
+            <p>Terminal-style interface for realistic cybersecurity visuals.</p>
         </div>
         <div class="card">
-            <h3>📘 Educational Use</h3>
-            <p>Built for learning, UI demos, presentations, and awareness content.</p>
+            <h3>📘 Educational Purpose</h3>
+            <p>Ideal for learning, UI demos, presentations, and awareness content.</p>
         </div>
     </div>
 
@@ -140,7 +149,7 @@ footer {
 </section>
 
 <footer>
-    ⚠ DISCLAIMER: This application is a **simulation and educational tool only**.  
+    ⚠ DISCLAIMER: This application is an **educational and awareness tool only**.  
     It does NOT hack, access, or interfere with real Wi-Fi networks.  
     Unauthorized network access is illegal.
 </footer>
@@ -149,11 +158,11 @@ footer {
 const terminal = document.getElementById("terminal");
 const logs = [
     "[*] Initializing WiFi modules...",
-    "[*] Simulating network scan...",
+    "[*] Scanning available networks...",
     "[+] Network detected: HOME_NET_5G",
     "[+] Encryption: WPA2-PSK",
-    "[*] Running vulnerability simulation...",
-    "[✓] Analysis completed successfully."
+    "[*] Analyzing network security...",
+    "[✓] Process completed successfully."
 ];
 
 let index = 0;
